@@ -25,7 +25,7 @@ env:
     
     - ANDROID_EMULATOR_LEVEL=21
     - ANDROID_ABI=armeabi-v7a
-    #- ANDROID_TAG=google_apis
+    - ANDROID_TAG=google_apis
     
     - ADB_INSTALL_TIMEOUT=20
 
@@ -73,7 +73,7 @@ before_install:
 before_script:
 # Create and start emulator.
 #  - echo no | android create avd --force -n test -t "android-"$ANDROID_EMULATOR_LEVEL --abi $ANDROID_ABI --tag $ANDROID_TAG
-  - echo no | android create avd --force -n test -t "android-"$ANDROID_EMULATOR_LEVEL --abi $ANDROID_ABI
+  - echo no | android create avd --force -n test -t "android-"$ANDROID_EMULATOR_LEVEL --abi $ANDROID_ABI --tag $ANDROID_TAG
   - emulator -avd test -no-skin -no-audio -no-window &
   - android-wait-for-emulator
   - adb shell input keyevent 82 &
