@@ -23,5 +23,5 @@ android:
     #- before_script
 script:
     - ./gradlew build check
-    - android list target
-    - ./gradlew connectedAndroidTest
+    #- android list target
+    #- ./gradlew connectedAndroidTest
