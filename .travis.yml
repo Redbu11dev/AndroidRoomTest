@@ -44,8 +44,8 @@ android:
   - while [ "`adb shell getprop sys.boot_completed | tr -d '\r' `" != "1" ] ; do sleep 1; done
   - adb shell input keyevent 82 &
   #- ./gradlew installDebug installDebugAndroidTest
-  # - ./gradlew jacocoTestReportDebug
+  - ./gradlew jacocoTestReportDebug
   #- ./gradlew jacocoTestReportDebug assembleAndroidTest test
-  - ./gradlew connectedAndroidTest
+  #- ./gradlew connectedAndroidTest
 
 # script: ./gradlew connectedAndroidTest
