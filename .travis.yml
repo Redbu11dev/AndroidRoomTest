@@ -21,6 +21,8 @@ android:
     - addon-google_apis-google-$ANDROID_API_LEVEL
 #before_script:
     #- before_script
+before_install:
+    - chmod +x gradlew
 script:
     - ./gradlew build check
     #- android list target
