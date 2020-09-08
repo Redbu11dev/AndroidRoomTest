@@ -2,20 +2,20 @@ language: android
 jdk: oraclejdk8
 sudo: false
 
-before_cache:
-  - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
+#before_cache:
+#  - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
 
-cache:
-  directories:
-    - $HOME/.gradle/caches/3.3
-    - $HOME/.gradle/wrapper/
-    - $HOME/.gradle/caches/jars-1
-    - $HOME/.gradle/daemon
-    - $HOME/.gradle/native
-    - $HOME/.gradle/wrapper
+#cache:
+#  directories:
+#    - $HOME/.gradle/caches/3.3
+#    - $HOME/.gradle/wrapper/
+#    - $HOME/.gradle/caches/jars-1
+#    - $HOME/.gradle/daemon
+#    - $HOME/.gradle/native
+#    - $HOME/.gradle/wrapper
 
-before_install:
-  - chmod +x gradlew
+#before_install:
+  #- chmod +x gradlew
   # - android list target
 
 android:
@@ -43,6 +43,9 @@ android:
     - android-23
     - sys-img-armeabi-v7a-android-23
     #- sys-img-x86-android-28
+    
+  licenses:
+    - '.+'
 
 # before_script:
   # Create and start emulator
