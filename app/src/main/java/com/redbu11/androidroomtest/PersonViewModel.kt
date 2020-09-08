@@ -1,19 +1,17 @@
 package com.redbu11.androidroomtest
 
+import android.app.Application
 import android.util.Patterns
 import androidx.databinding.Bindable
 import androidx.databinding.Observable
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
+import androidx.lifecycle.*
 import com.redbu11.androidroomtest.db.Person
 import com.redbu11.androidroomtest.db.PersonRepository
 import com.redbu11.androidroomtest.utils.Event
 import kotlinx.coroutines.launch
 
 
-class PersonViewModel(private val repository: PersonRepository) : ViewModel(), Observable {
+class PersonViewModel(private val repository: PersonRepository, application: Application) : AndroidViewModel(application), Observable {
 
     val persons = repository.persons
     private var isUpdateOrDelete = false

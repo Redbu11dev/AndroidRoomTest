@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this,R.layout.activity_main)
         val dao = PersonDatabase.getInstance(application).personDAO
         val repository = PersonRepository(dao)
-        val factory = PersonViewModelFactory(repository)
+        val factory = PersonViewModelFactory(repository, application)
         personViewModel = ViewModelProvider(this,factory).get(PersonViewModel::class.java)
         binding.myViewModel = personViewModel
         binding.lifecycleOwner = this
