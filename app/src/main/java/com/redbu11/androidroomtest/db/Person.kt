@@ -4,6 +4,9 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
+/**
+ * Person data class
+ */
 @Entity(tableName = "person_data_table")
 data class Person (
 
