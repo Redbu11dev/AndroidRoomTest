@@ -1,6 +1,7 @@
 package com.redbu11.androidroomtest
 
 import android.app.Application
+import android.text.TextUtils
 import android.util.Patterns
 import androidx.databinding.Bindable
 import androidx.databinding.Observable
@@ -42,9 +43,9 @@ class PersonViewModel(private val repository: PersonRepository, application: App
 
     fun saveOrUpdate() {
 
-        if (inputName.value == null) {
+        if (TextUtils.isEmpty(inputName.value)) {
             statusMessage.value = Event("Please enter person's name")
-        } else if (inputEmail.value == null) {
+        } else if (TextUtils.isEmpty(inputEmail.value)) {
             statusMessage.value = Event("Please enter person's email")
         } else if (!Patterns.EMAIL_ADDRESS.matcher(inputEmail.value!!).matches()) {
             statusMessage.value = Event("Please enter a correct email address")
