@@ -6,10 +6,7 @@ AndroidRoomTest
 # Description
 Simple android app to test usage and keep reference on room library.
 
-![Screenshot](/../master/Screenshot_20200911-222759_AndroidRoomTest.png?raw=true "Screenshot")
-
-
-
+<img src="Screenshot_20200911-222759_AndroidRoomTest.png" height="400" alt="Screenshot"/>
 
 # TODO
 - Move strings to resource file
