@@ -5,6 +5,11 @@ AndroidRoomTest
 
 # Description
 Simple android app to test usage and keep reference on room library.
-Used Kotlin, MVVM, Data binding, Room
+
+![Screenshot](/../master/Screenshot_20200911-222759_AndroidRoomTest.png?raw=true "Screenshot")
+
+
+
+
 # TODO
 - Move strings to resource file
